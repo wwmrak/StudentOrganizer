@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wwmrak.studentorganizer">
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <permission
+        android:name="com.wwmrak.main.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.wwmrak.main.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Student Organizer"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.wwmrak.main.start.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.wwmrak.main.start.MainActivity" />
+        <activity android:name="com.wwmrak.main.profile.CreateDayActivity" />
+        <activity android:name="com.wwmrak.main.profile.RecordLectureActivity" />
+        <activity android:name="com.wwmrak.main.library.DownloadActivity" />
+        <activity android:name="com.wwmrak.main.schedule.EventActivity" />
+        <activity android:name="com.wwmrak.main.location.LocationActivity" />
+        <activity android:name="com.wwmrak.main.schedule.ViewScheduleActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCHx4fAWeV5q_lG8ftmTYjJwJgmZZLqpt8" />
+    </application>
+
+</manifest>
